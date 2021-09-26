@@ -31,7 +31,7 @@ def _start(client, message):
                         "💬 Rəsmi Qrup", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "Sahibim🤵🏻", url=f"https://t.me/tag1y3v")
+                        "Sahibim🤵🏻", url=f"https://t.me/ABISHOV_27")
                 ]
             ]
         ),
@@ -46,7 +46,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "💬 Rəsmi Qrup", url=f"https://t.me/{SUPPORT_GROUP}"
+                        "💬", url=f"https://t.me/{SUPPORT_GROUP}"
                     )
                 ]
             ]
@@ -87,8 +87,8 @@ def map(pos):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
             [InlineKeyboardButton("➕ Məni qrupunuza əlavə edin 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '📲 Rəsmi Kanal', url=f"https://t.me/{UPDATES_CHANNEL}"),
-             InlineKeyboardButton(text = '💬 Rəsmi Qrup', url=f"https://t.me/{SUPPORT_GROUP}")],
+            [InlineKeyboardButton(text = '📲', url=f"https://t.me/{UPDATES_CHANNEL}"),
+             InlineKeyboardButton(text = '💬', url=f"https://t.me/{SUPPORT_GROUP}")],
             [InlineKeyboardButton(text = 'Sahibim🤵🏻', url=f"https://t.me/tag1y3v")],
             [InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}")]
         ]
@@ -104,7 +104,7 @@ def map(pos):
 @Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
-        f"""**🙋‍♀️ Salam! Mən qrupunuzun səsli söhbətində musiqi dinləməyiniz üçün @tag1y3v tərəfindən yaradılmış bir botam.**""",
+        f"""**🙋‍♀️ Salam! Mən qrupunuzun səsli söhbətində musiqi dinləməyiniz üçün @ABISHOV_27 tərəfindən yaradılmış bir botam.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
