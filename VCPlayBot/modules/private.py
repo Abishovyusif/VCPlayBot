@@ -23,15 +23,15 @@ def _start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Məni qrupa əlavə et 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                        "➕ Məni qrupa əlavə edin 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "📲 Kanal", url=f"https://t.me/YusifinBiosu"), 
+                        "📲 Rəsmi Kanal", url=f"https://t.me/{UPDATES_CHANNEL}"), 
                     InlineKeyboardButton(
-                        "💬 Sahib", url=f"https://t.me/ABISHOV_27")
+                        "💬 Rəsmi Qrup", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "🛠 Əlaqə 🛠", url=f"https://ABISHOV_27")
+                        "Sahibim🤵🏻", url=f"https://t.me/tag1y3v")
                 ]
             ]
         ),
@@ -41,12 +41,12 @@ def _start(client, message):
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
     await message.reply_text(
-        f"""**🔴 {PROJECT_NAME} onlayndır**""",
+        f"""**🟢 {PROJECT_NAME} onlayndır**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "💬 Sahib", url=f"https://t.me/ABISHOV_27"
+                        "💬 Rəsmi Qrup", url=f"https://t.me/{SUPPORT_GROUP}"
                     )
                 ]
             ]
@@ -84,12 +84,12 @@ def map(pos):
             [InlineKeyboardButton(text = '▶️', callback_data = "help+2")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
-        url = f"https://t.me/YusifinBiosu"
+        url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
-            [InlineKeyboardButton("➕ Məni qrupa əlavə et 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '📲 Kanal', url=f"https://t.me/YusifinBiosu"),
-             InlineKeyboardButton(text = '💬 Sahib, url=f"https://t.me/ABISHOV_27")],
-            [InlineKeyboardButton(text = '💜 Sahibə', url=f"https://ABISHOVA_03")],
+            [InlineKeyboardButton("➕ Məni qrupunuza əlavə edin 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+            [InlineKeyboardButton(text = '📲 Rəsmi Kanal', url=f"https://t.me/{UPDATES_CHANNEL}"),
+             InlineKeyboardButton(text = '💬 Rəsmi Qrup', url=f"https://t.me/{SUPPORT_GROUP}")],
+            [InlineKeyboardButton(text = 'Sahibim🤵🏻', url=f"https://t.me/tag1y3v")],
             [InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}")]
         ]
     else:
@@ -104,12 +104,12 @@ def map(pos):
 @Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
-        f"""**🙋‍♀️ Salam.Məni qrupa əlavə edərək səsli söhbətdə mahnı dinləyə bilərsiniz.**""",
+        f"""**🙋‍♀️ Salam! Mən qrupunuzun səsli söhbətində musiqi dinləməyiniz üçün @tag1y3v tərəfindən yaradılmış bir botam.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🟡 Kömək Al 🟡", url=f"https://t.me/{BOT_USERNAME}?start"
+                        "🟡 Kömək üçün tıkla 🟡", url=f"https://t.me/{BOT_USERNAME}?start"
                     )
                 ]
             ]
